@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK #1</title>
+</head>
+<body>
+    <script src="myscript.js"></script>
+    <center><h1>TRAINGING TASK #1</h1></center>
+    <form onsubmit="return validate()">
+        <table>
+            <tr>
+                <td>
+                    <label for="fname">NAME</label>
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname">AGE</label>
+                </td>
+                <td>
+                    <input type="text" id="age">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" id="btn" value="SAVE" onclick="validate();addrow()">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <br> <br> <br>
+
+    <table id="show" border="3">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+            </tr>
+        </thead>
+    </table>
+
+</body>
+</html>
