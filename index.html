@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TASK #1</title>
+    <title>TASK #3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-    <script src="myscript.js"></script>
-    <center><h1>TRAINGING TASK #1</h1></center>
-    <form onsubmit="return validate()">
-        <table>
-            <tr>
-                <td>
-                    <label for="fname">NAME</label>
-                </td>
-                <td>
-                    <input type="text" id="name">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="lname">AGE</label>
-                </td>
-                <td>
-                    <input type="text" id="age">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="button" id="btn" value="SAVE" onclick="validate();addrow()">
-                </td>
-            </tr>
+
+<body> 
+   
+    <center>
+        <h1>TRAINGING TASK #3</h1>
+
+        <br> 
+    
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="fname">NAME</label>
+                    </td>
+                    <td>
+                        <input type="text" onfocus="this.value=''" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lname">AGE</label>
+                    </td>
+                    <td>
+                        <input type="text" onfocus="this.value=''" id="age">
+                    </td>
+                </tr>   
+            </table>
+        </form>
+        
+        <br>
+
+        <input type="button" id="btn" value="SAVE" onclick="AddRow()" />
+
+        <br> <br> <br>
+
+        <table id="show" border="3">
+            <thead>
+                <tr id="table-header-place-holder" class="table table-striped">
+                    <th ondblclick="sortTableByNameDes()" onclick="sortTableByNameAsc()"> NAME </th>
+                    <th ondblclick="sortTableByAgeDes()" onclick="sortTableByAgeAsc()"> AGE </th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+        
+    </tbody>
         </table>
-    </form>
+    </center>
 
-    <br> <br> <br>
 
-    <table id="show" border="3">
-        <thead>
-            <tr>
-                <th>NAME</th>
-                <th>AGE</th>
-            </tr>
-        </thead>
-    </table>
+    <script src="myscript.js"></script>
 
 </body>
 </html>
